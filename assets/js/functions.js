@@ -63,7 +63,7 @@ $( document ).ready(function() {
 
   });
 
-  // swipe support for touch devices
+  /*// swipe support for touch devices
   var targetElement = document.getElementById('viewport'),
       mc = new Hammer(targetElement);
   mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
@@ -71,7 +71,7 @@ $( document ).ready(function() {
 
     updateHelper(e);
 
-  });
+  });*/
 
   $(document).keyup(function(e){
 
