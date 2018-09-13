@@ -119,9 +119,9 @@ $( document ).ready(function() {
   // sync side and outer navigations
   function updateNavs(nextPos) {
 
-    $('.side-nav, .outer-nav').children().removeClass('is-active');
+    $('.side-nav, .header_nav').children().removeClass('is-active');
     $('.side-nav').children().eq(nextPos).addClass('is-active');
-    $('.outer-nav').children().eq(nextPos).addClass('is-active');
+    $('.header_nav').children().eq(nextPos).addClass('is-active');
 
   }
 
@@ -278,3 +278,106 @@ $( document ).ready(function() {
   transitionLabels();
 
 });
+
+
+/***************************************************************************************/
+/***************************************************************************************/
+
+const slideToggle = function() {
+  const sideItems = document.querySelectorAll('.side-item');
+  const headerItems = document.querySelectorAll('.header_nav-item');
+  const sectionList = document.querySelectorAll('.section');
+  const arrowList = document.querySelectorAll('.section-arrow');
+  const arrowTop = document.querySelector('.section-arrow-top');
+  
+  for(let i = 0; i < sectionList.length; i++) {
+    headerItems[i].addEventListener('click', function(e){
+      
+      e.preventDefault();
+      for(let i = 0; i < sectionList.length; i++) {
+        sideItems[i].classList.remove('is-active');
+        headerItems[i].classList.remove('is-active');
+        sectionList[i].classList.remove('section--is-active');
+      }
+
+      sideItems[i].classList.add('is-active');
+      headerItems[i].classList.add('is-active');
+      sectionList[i].classList.add('section--is-active');
+    })
+
+    
+  }
+
+  for(let i = 0; i < arrowList.length; i++) {
+    arrowList[i].addEventListener('click', function(){
+      for(let i = 0; i < sectionList.length; i++) {
+        sideItems[i].classList.remove('is-active');
+        headerItems[i].classList.remove('is-active');
+        sectionList[i].classList.remove('section--is-active');
+      }
+        sideItems[i +1].classList.add('is-active');
+        headerItems[i + 1].classList.add('is-active');
+        sectionList[i + 1].classList.add('section--is-active');
+      
+    });
+  }
+
+  arrowTop.addEventListener('click', function(){
+    
+    for(let i = 0; i < sectionList.length; i++) {
+      sideItems[i].classList.remove('is-active');
+      headerItems[i].classList.remove('is-active');
+      sectionList[i].classList.remove('section--is-active');
+    }
+      sideItems[0].classList.add('is-active');
+      headerItems[0].classList.add('is-active');
+      sectionList[0].classList.add('section--is-active');
+  });
+};
+
+slideToggle();
+
+/***************************************************************************************************/
+
+const servicesPageOpen = function() {
+  const pageBtn = document.querySelectorAll('.section-second_services-item');
+  const pageItem = document.querySelectorAll('.services-article');
+  const closeBtn = document.querySelectorAll('.close-btn');
+
+  for(let i = 0; i < pageBtn.length; i++) {
+    pageBtn[i].addEventListener('click', function(e){
+      e.preventDefault();
+      pageItem[i].classList.remove('services-article--animate-close');
+      pageItem[i].classList.add('services-article--animate-open');
+    });
+
+    closeBtn[i].addEventListener('click', function(){
+      pageItem[i].classList.remove('services-article--animate-open');
+      pageItem[i].classList.add('services-article--animate-close');
+    })
+  }
+}
+
+servicesPageOpen();
+
+/****************************************************************************************************/
+
+
+const slideNavSlider = function () {
+  const btnPrev = document.querySelector('.section-third_gallery-nav .slick-prev');
+  const btnNext = document.querySelector('.section-third_gallery-nav .slick-next');
+
+btnPrev.addEventListener('click', function(){
+  
+  
+});
+  
+  
+};
+
+
+slideNavSlider();
+
+
+
+
