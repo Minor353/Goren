@@ -8,6 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
@@ -22,7 +23,11 @@
         <div class="l-wrapper">
           <div class="wrapper">
             <header class="header">
+              <div class="header_nav--decor">
+                <div class="header_nav__left-side"></div>
+              </div>
               <ul class="header_nav">
+                
                 <li class="header_nav-item  is-active">
                   <a href="#">ГЛАВНАЯ</a>
                 </li>
@@ -30,7 +35,7 @@
                   <a href="#">УСЛУГИ</a>
                 </li>
                 <li class="header_nav-item">
-                  <a href="#">НАШИ РАБОТЫ</a>
+                  <a href="works.html">НАШИ РАБОТЫ</a>
                 </li>
                 <li class="header_nav-item">
                   <a href="#">О НАС</a>
@@ -38,14 +43,45 @@
                 <li class="header_nav-item">
                   <a href="#">КОНТАКТЫ</a>
                 </li>
+                <ul class="header_nav-item section-first_features-contact-list  section-first_features-contact-list--mobile">
+                  <li class="section-first_features-contact-item"><i class="fas fa-clock"></i>Пн - Сб с 9:00 до 22:00</li>
+                  <li class="section-first_features-contact-item"><i class="fas fa-phone"></i>+38 066 123 45 67, +38
+                    067 123 45 67</li>
+                  <li class="section-first_features-contact-item"><i class="fas fa-envelope"></i>carskin@gmail.com</li>
+                  <li class="section-first_features-contact-item"><i class="fas fa-map-marker-alt"></i>г. Днепр.
+                    ул.Паникахи, 6</li>
+                </ul>
               </ul>
 
+              <div class="burger-mobile">
+                <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                <path
+                      class="line top"
+                      d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+                <path
+                      class="line middle"
+                      d="m 30,50 h 40" />
+                <path
+                      class="line bottom"
+                      d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+              </svg>
+            </div>
+
               <a class="header--logo" href="#0">
-                <img src="assets/img/logo.svg" alt="Global">
+                <img src="assets/img/logo2.svg" alt="Global">
               </a>
 
-              <div class="header-toggle">
+              <!--<div class="header-toggle">
                 <span>ПОЛУЧИТЬ КОСУЛЬТАЦИЮ</span>
+              </div>-->
+
+              <div class="header-contact">
+                <div><i class="fas fa-phone"></i>+38 066 123 45 67</div>
+                <div>Перетяжка микроавтобусов</div>
+              </div>
+              <div class="header-contact">
+                <div><i class="fas fa-phone"></i>+38 066 123 45 67</div>
+                <div>Перетяжка легковых авто</div>
               </div>
             </header>
           </div>
@@ -84,6 +120,9 @@
                   </div>
                   ПЕРЕТЯЖКА И ОБШИВКА САЛОНОВ АВТО
                 </h1>
+                <div class="header-toggle  header-toggle--mobile">
+                  <span>ПОЛУЧИТЬ КОСУЛЬТАЦИЮ</span>
+                </div>
                 <div class="section-first_features-wrap">
 
                   <div class="section-first_features-item">
@@ -175,11 +214,11 @@
             <li class="section-second l-section section">
               <div class="section-second_services">
                 <div class="section-second_services-btn-wrap">
-                  <a href="#" class="section-second_services-btn  section-second_services-btn--active">ПЕРЕТЯЖКА САЛОНА</a>
-                  <a href="#" class="section-second_services-btn">ДООСНАЩЕНИЕ АВТО</a>
+                  <a href="#" class="section-second_services-btn  section-second_services-btn--active">ПЕРЕТЯЖКА ЛЕГКОВЫХ АВТО</a>
+                  <a href="#" class="section-second_services-btn">ПЕРЕТЯЖКА МИКРОАВТОБУСОВ</a>
                 </div>
 
-                <div class="section-second_services-item-wrap">
+                <div class="section-second_services-item-wrap  section-second_services-item-wrap--active">
                   <div class="section-second_services-item">
                     <div class="section-section_services-item-img">
                       <div class="section-section_services-img--decor"></div>
@@ -219,6 +258,23 @@
 
                     <div class="section-section_services-item-text  section-section_services-item-text--width">ПЕРЕТЯЖКА
                       РУЛЯ</div>
+
+                    <a href="#" class="section-section_services-item-btn">ПОДРОБНЕЕ</a>
+                  </div>
+
+                  <div class="section-second_services-item">
+                    <div class="section-section_services-item-img">
+                      <div class="section-section_services-img--decor"></div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.656 78.896">
+                        <defs></defs>
+                        <g transform="translate(0 0)">
+                          <path class="a" d="M78.584,37.594l-4.746-.446a24.933,24.933,0,0,0-2.339-5.5l3.008-3.609a2.223,2.223,0,0,0-.134-2.986l-5.927-5.993a2.229,2.229,0,0,0-3.008-.156l-3.632,3.008a25.607,25.607,0,0,0-5.459-2.317L55.9,14.867A2.223,2.223,0,0,0,53.7,12.862H46.121V6.178a2.228,2.228,0,0,0-4.456,0v4.011H19.429a8.145,8.145,0,0,0-7.575,5.3L5.169,33.539c0,.022-.022.067-.022.089l-1.671,1.56a10.994,10.994,0,0,0-3.476,8v26.6a8.046,8.046,0,0,0,8.155,7.954h4.857a8.06,8.06,0,0,0,8.155-7.954V66.358h20.5v14.26a2.228,2.228,0,0,0,4.456,0V75.27H53.7a2.23,2.23,0,0,0,2.228-2.028L56.37,68.5A25.709,25.709,0,0,0,61.851,66.2l3.632,3.008a2.222,2.222,0,0,0,2.986-.134l5.993-5.993a2.251,2.251,0,0,0,.134-3.008l-3.008-3.632A26.1,26.1,0,0,0,73.9,50.984l4.7-.446a2.267,2.267,0,0,0,2.05-2.228V39.8A2.32,2.32,0,0,0,78.584,37.594Zm-61.9,32.173a3.593,3.593,0,0,1-3.7,3.5H8.132a3.607,3.607,0,0,1-3.7-3.5V65.578a8.491,8.491,0,0,0,3.7.78h8.556ZM41.642,45.191H34.669a2.228,2.228,0,0,0,0,4.456h6.974v1.114H34.669a2.228,2.228,0,1,0,0,4.456h6.974V61.9H8.132a3.629,3.629,0,0,1-3.7-3.543v-15.2A6.649,6.649,0,0,1,6.528,38.4L8.533,36.5H41.642v8.689ZM18.448,32.046a8.57,8.57,0,0,1,16.554,0Zm23.194,0H39.57a13.037,13.037,0,0,0-25.69,0H10.45l5.57-15.017a3.608,3.608,0,0,1,3.387-2.362H41.642ZM46.1,34.653a9.971,9.971,0,1,1,0,18.8Zm30.079,11.63h0l-4.256.4a2.277,2.277,0,0,0-1.983,1.738,21.119,21.119,0,0,1-2.963,7,2.21,2.21,0,0,0,.156,2.629l2.718,3.3L66.73,64.464l-3.3-2.718a2.21,2.21,0,0,0-2.651-.134,20.323,20.323,0,0,1-6.974,2.941,2.2,2.2,0,0,0-1.738,1.961l-.4,4.278H46.1V58.07a14.411,14.411,0,1,0,0-28.051V17.341h5.548L52.07,21.6a2.227,2.227,0,0,0,1.738,1.961,21.545,21.545,0,0,1,7,2.941,2.21,2.21,0,0,0,2.629-.156l3.275-2.718,3.075,3.1-2.741,3.32a2.208,2.208,0,0,0-.134,2.651,20.323,20.323,0,0,1,2.941,6.974A2.252,2.252,0,0,0,71.855,41.4l4.322.4v4.478Z"
+                            transform="translate(0 -3.95)" />
+                        </g>
+                      </svg>
+                    </div>
+
+                    <div class="section-section_services-item-text">КОМПЛЕКСНЫЙ ПЕРЕШИВ САЛОНА</div>
 
                     <a href="#" class="section-section_services-item-btn">ПОДРОБНЕЕ</a>
                   </div>
@@ -268,6 +324,131 @@
                     <a href="#" class="section-section_services-item-btn">ПОДРОБНЕЕ</a>
                   </div>
                 </div>
+
+                <div class="section-second_services-item-wrap">
+                  <div class="section-second_services-item">
+                    <div class="section-section_services-item-img">
+                      <div class="section-section_services-img--decor"></div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.656 78.896">
+                        <defs></defs>
+                        <g transform="translate(0 0)">
+                          <path class="a" d="M78.584,37.594l-4.746-.446a24.933,24.933,0,0,0-2.339-5.5l3.008-3.609a2.223,2.223,0,0,0-.134-2.986l-5.927-5.993a2.229,2.229,0,0,0-3.008-.156l-3.632,3.008a25.607,25.607,0,0,0-5.459-2.317L55.9,14.867A2.223,2.223,0,0,0,53.7,12.862H46.121V6.178a2.228,2.228,0,0,0-4.456,0v4.011H19.429a8.145,8.145,0,0,0-7.575,5.3L5.169,33.539c0,.022-.022.067-.022.089l-1.671,1.56a10.994,10.994,0,0,0-3.476,8v26.6a8.046,8.046,0,0,0,8.155,7.954h4.857a8.06,8.06,0,0,0,8.155-7.954V66.358h20.5v14.26a2.228,2.228,0,0,0,4.456,0V75.27H53.7a2.23,2.23,0,0,0,2.228-2.028L56.37,68.5A25.709,25.709,0,0,0,61.851,66.2l3.632,3.008a2.222,2.222,0,0,0,2.986-.134l5.993-5.993a2.251,2.251,0,0,0,.134-3.008l-3.008-3.632A26.1,26.1,0,0,0,73.9,50.984l4.7-.446a2.267,2.267,0,0,0,2.05-2.228V39.8A2.32,2.32,0,0,0,78.584,37.594Zm-61.9,32.173a3.593,3.593,0,0,1-3.7,3.5H8.132a3.607,3.607,0,0,1-3.7-3.5V65.578a8.491,8.491,0,0,0,3.7.78h8.556ZM41.642,45.191H34.669a2.228,2.228,0,0,0,0,4.456h6.974v1.114H34.669a2.228,2.228,0,1,0,0,4.456h6.974V61.9H8.132a3.629,3.629,0,0,1-3.7-3.543v-15.2A6.649,6.649,0,0,1,6.528,38.4L8.533,36.5H41.642v8.689ZM18.448,32.046a8.57,8.57,0,0,1,16.554,0Zm23.194,0H39.57a13.037,13.037,0,0,0-25.69,0H10.45l5.57-15.017a3.608,3.608,0,0,1,3.387-2.362H41.642ZM46.1,34.653a9.971,9.971,0,1,1,0,18.8Zm30.079,11.63h0l-4.256.4a2.277,2.277,0,0,0-1.983,1.738,21.119,21.119,0,0,1-2.963,7,2.21,2.21,0,0,0,.156,2.629l2.718,3.3L66.73,64.464l-3.3-2.718a2.21,2.21,0,0,0-2.651-.134,20.323,20.323,0,0,1-6.974,2.941,2.2,2.2,0,0,0-1.738,1.961l-.4,4.278H46.1V58.07a14.411,14.411,0,1,0,0-28.051V17.341h5.548L52.07,21.6a2.227,2.227,0,0,0,1.738,1.961,21.545,21.545,0,0,1,7,2.941,2.21,2.21,0,0,0,2.629-.156l3.275-2.718,3.075,3.1-2.741,3.32a2.208,2.208,0,0,0-.134,2.651,20.323,20.323,0,0,1,2.941,6.974A2.252,2.252,0,0,0,71.855,41.4l4.322.4v4.478Z"
+                            transform="translate(0 -3.95)" />
+                        </g>
+                      </svg>
+                    </div>
+
+                    <div class="section-section_services-item-text">КОМПЛЕКСНЫЙ ПЕРЕШИВ САЛОНА</div>
+
+                    <a href="#" class="section-section_services-item-btn">ПОДРОБНЕЕ</a>
+                  </div>
+
+                  <div class="section-second_services-item">
+                    <div class="section-section_services-item-img">
+                      <div class="section-section_services-img--decor"></div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.656 78.896">
+                        <defs></defs>
+                        <g transform="translate(0 0)">
+                          <path class="a" d="M78.584,37.594l-4.746-.446a24.933,24.933,0,0,0-2.339-5.5l3.008-3.609a2.223,2.223,0,0,0-.134-2.986l-5.927-5.993a2.229,2.229,0,0,0-3.008-.156l-3.632,3.008a25.607,25.607,0,0,0-5.459-2.317L55.9,14.867A2.223,2.223,0,0,0,53.7,12.862H46.121V6.178a2.228,2.228,0,0,0-4.456,0v4.011H19.429a8.145,8.145,0,0,0-7.575,5.3L5.169,33.539c0,.022-.022.067-.022.089l-1.671,1.56a10.994,10.994,0,0,0-3.476,8v26.6a8.046,8.046,0,0,0,8.155,7.954h4.857a8.06,8.06,0,0,0,8.155-7.954V66.358h20.5v14.26a2.228,2.228,0,0,0,4.456,0V75.27H53.7a2.23,2.23,0,0,0,2.228-2.028L56.37,68.5A25.709,25.709,0,0,0,61.851,66.2l3.632,3.008a2.222,2.222,0,0,0,2.986-.134l5.993-5.993a2.251,2.251,0,0,0,.134-3.008l-3.008-3.632A26.1,26.1,0,0,0,73.9,50.984l4.7-.446a2.267,2.267,0,0,0,2.05-2.228V39.8A2.32,2.32,0,0,0,78.584,37.594Zm-61.9,32.173a3.593,3.593,0,0,1-3.7,3.5H8.132a3.607,3.607,0,0,1-3.7-3.5V65.578a8.491,8.491,0,0,0,3.7.78h8.556ZM41.642,45.191H34.669a2.228,2.228,0,0,0,0,4.456h6.974v1.114H34.669a2.228,2.228,0,1,0,0,4.456h6.974V61.9H8.132a3.629,3.629,0,0,1-3.7-3.543v-15.2A6.649,6.649,0,0,1,6.528,38.4L8.533,36.5H41.642v8.689ZM18.448,32.046a8.57,8.57,0,0,1,16.554,0Zm23.194,0H39.57a13.037,13.037,0,0,0-25.69,0H10.45l5.57-15.017a3.608,3.608,0,0,1,3.387-2.362H41.642ZM46.1,34.653a9.971,9.971,0,1,1,0,18.8Zm30.079,11.63h0l-4.256.4a2.277,2.277,0,0,0-1.983,1.738,21.119,21.119,0,0,1-2.963,7,2.21,2.21,0,0,0,.156,2.629l2.718,3.3L66.73,64.464l-3.3-2.718a2.21,2.21,0,0,0-2.651-.134,20.323,20.323,0,0,1-6.974,2.941,2.2,2.2,0,0,0-1.738,1.961l-.4,4.278H46.1V58.07a14.411,14.411,0,1,0,0-28.051V17.341h5.548L52.07,21.6a2.227,2.227,0,0,0,1.738,1.961,21.545,21.545,0,0,1,7,2.941,2.21,2.21,0,0,0,2.629-.156l3.275-2.718,3.075,3.1-2.741,3.32a2.208,2.208,0,0,0-.134,2.651,20.323,20.323,0,0,1,2.941,6.974A2.252,2.252,0,0,0,71.855,41.4l4.322.4v4.478Z"
+                            transform="translate(0 -3.95)" />
+                        </g>
+                      </svg>
+                    </div>
+
+                    <div class="section-section_services-item-text">КОМПЛЕКСНЫЙ ПЕРЕШИВ САЛОНА</div>
+
+                    <a href="#" class="section-section_services-item-btn">ПОДРОБНЕЕ</a>
+                  </div>
+
+                  <div class="section-second_services-item">
+                    <div class="section-section_services-item-img">
+                      <div class="section-section_services-img--decor"></div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.979 80.985">
+                        <defs></defs>
+                        <g transform="translate(80.998 80.985) rotate(-180)">
+                          <g transform="translate(7.358 7.339)">
+                            <path class="a" d="M75.568,42.4A33.149,33.149,0,1,0,108.716,75.55,33.185,33.185,0,0,0,75.568,42.4Zm6.855,4.258A29.792,29.792,0,0,1,104.6,69.318H85.088a11.8,11.8,0,0,0-2.908-3.029Zm-3.462-.606-.225,18.574a11.279,11.279,0,0,0-6.249-.017l-.1-18.574A29.848,29.848,0,0,1,78.961,46.053ZM75.568,67.639a7.911,7.911,0,1,1-7.911,7.911A7.908,7.908,0,0,1,75.568,67.639ZM68.921,46.607l.121,19.63a11.78,11.78,0,0,0-2.995,3.081H46.539A29.806,29.806,0,0,1,68.921,46.607ZM45.881,75.55c0-.935.052-1.852.138-2.77H64.541a11.531,11.531,0,0,0,0,5.539H46.019A24.527,24.527,0,0,1,45.881,75.55Zm29.687,29.687A29.751,29.751,0,0,1,46.539,81.781H66.047A11.364,11.364,0,0,0,81.782,85.07a11.238,11.238,0,0,0,3.289-3.289H104.6A29.751,29.751,0,0,1,75.568,105.236ZM86.594,78.319a11.117,11.117,0,0,0,0-5.539h18.522c.087.917.138,1.835.138,2.77s-.052,1.852-.138,2.77Z"
+                              transform="translate(-42.419 -42.401)" />
+                          </g>
+                          <g transform="translate(0.019 0)">
+                            <g transform="translate(0 0)">
+                              <path class="a" d="M69.138,11.857a40.49,40.49,0,1,0,0,57.262A40.209,40.209,0,0,0,69.138,11.857ZM66.767,66.609a.135.135,0,0,0-.069.069A37.038,37.038,0,1,1,14.248,14.367l.069-.069A37.038,37.038,0,1,1,66.767,66.609Z"
+                                transform="translate(-0.019 0)" />
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+
+                    <div class="section-section_services-item-text  section-section_services-item-text--width">ПЕРЕТЯЖКА
+                      РУЛЯ</div>
+
+                    <a href="#" class="section-section_services-item-btn">ПОДРОБНЕЕ</a>
+                  </div>
+
+                  <div class="section-second_services-item">
+                    <div class="section-section_services-item-img">
+                      <div class="section-section_services-img--decor"></div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.656 78.896">
+                        <defs></defs>
+                        <g transform="translate(0 0)">
+                          <path class="a" d="M78.584,37.594l-4.746-.446a24.933,24.933,0,0,0-2.339-5.5l3.008-3.609a2.223,2.223,0,0,0-.134-2.986l-5.927-5.993a2.229,2.229,0,0,0-3.008-.156l-3.632,3.008a25.607,25.607,0,0,0-5.459-2.317L55.9,14.867A2.223,2.223,0,0,0,53.7,12.862H46.121V6.178a2.228,2.228,0,0,0-4.456,0v4.011H19.429a8.145,8.145,0,0,0-7.575,5.3L5.169,33.539c0,.022-.022.067-.022.089l-1.671,1.56a10.994,10.994,0,0,0-3.476,8v26.6a8.046,8.046,0,0,0,8.155,7.954h4.857a8.06,8.06,0,0,0,8.155-7.954V66.358h20.5v14.26a2.228,2.228,0,0,0,4.456,0V75.27H53.7a2.23,2.23,0,0,0,2.228-2.028L56.37,68.5A25.709,25.709,0,0,0,61.851,66.2l3.632,3.008a2.222,2.222,0,0,0,2.986-.134l5.993-5.993a2.251,2.251,0,0,0,.134-3.008l-3.008-3.632A26.1,26.1,0,0,0,73.9,50.984l4.7-.446a2.267,2.267,0,0,0,2.05-2.228V39.8A2.32,2.32,0,0,0,78.584,37.594Zm-61.9,32.173a3.593,3.593,0,0,1-3.7,3.5H8.132a3.607,3.607,0,0,1-3.7-3.5V65.578a8.491,8.491,0,0,0,3.7.78h8.556ZM41.642,45.191H34.669a2.228,2.228,0,0,0,0,4.456h6.974v1.114H34.669a2.228,2.228,0,1,0,0,4.456h6.974V61.9H8.132a3.629,3.629,0,0,1-3.7-3.543v-15.2A6.649,6.649,0,0,1,6.528,38.4L8.533,36.5H41.642v8.689ZM18.448,32.046a8.57,8.57,0,0,1,16.554,0Zm23.194,0H39.57a13.037,13.037,0,0,0-25.69,0H10.45l5.57-15.017a3.608,3.608,0,0,1,3.387-2.362H41.642ZM46.1,34.653a9.971,9.971,0,1,1,0,18.8Zm30.079,11.63h0l-4.256.4a2.277,2.277,0,0,0-1.983,1.738,21.119,21.119,0,0,1-2.963,7,2.21,2.21,0,0,0,.156,2.629l2.718,3.3L66.73,64.464l-3.3-2.718a2.21,2.21,0,0,0-2.651-.134,20.323,20.323,0,0,1-6.974,2.941,2.2,2.2,0,0,0-1.738,1.961l-.4,4.278H46.1V58.07a14.411,14.411,0,1,0,0-28.051V17.341h5.548L52.07,21.6a2.227,2.227,0,0,0,1.738,1.961,21.545,21.545,0,0,1,7,2.941,2.21,2.21,0,0,0,2.629-.156l3.275-2.718,3.075,3.1-2.741,3.32a2.208,2.208,0,0,0-.134,2.651,20.323,20.323,0,0,1,2.941,6.974A2.252,2.252,0,0,0,71.855,41.4l4.322.4v4.478Z"
+                            transform="translate(0 -3.95)" />
+                        </g>
+                      </svg>
+                    </div>
+
+                    <div class="section-section_services-item-text">КОМПЛЕКСНЫЙ ПЕРЕШИВ САЛОНА</div>
+
+                    <a href="#" class="section-section_services-item-btn">ПОДРОБНЕЕ</a>
+                  </div>
+
+                  <div class="section-second_services-item">
+                    <div class="section-section_services-item-img">
+                      <div class="section-section_services-img--decor"></div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.989 82.424">
+                        <defs></defs>
+                        <g transform="translate(-75.049 0)">
+                          <g transform="translate(75.049 0)">
+                            <path class="a" d="M123.764,68.141h-.616V65.27a7.277,7.277,0,0,0-7.2-7.344H108V25.52h.581a1.753,1.753,0,0,0,1.744-1.55l.581-4.9a11.482,11.482,0,0,0,3.276-8,11.114,11.114,0,1,0-18.968,8l.581,4.9a1.766,1.766,0,0,0,1.744,1.55h.581V57.926H90.178a7.288,7.288,0,0,0-7.2,7.344v2.871h-.616A7.291,7.291,0,0,0,75.049,75.4v5.248a1.8,1.8,0,0,0,1.8,1.779h52.4a1.8,1.8,0,0,0,1.8-1.779V75.4A7.25,7.25,0,0,0,123.764,68.141Zm-25.7-51.216A7.69,7.69,0,0,1,95.5,11.148a7.591,7.591,0,0,1,15.182-.07,7.934,7.934,0,0,1-2.571,5.847,1.8,1.8,0,0,0-.581,1.11L107.015,22H99.107l-.476-3.963A1.659,1.659,0,0,0,98.068,16.925Zm6.411,8.595V57.926h-2.818V25.52ZM86.514,65.27A3.756,3.756,0,0,1,90.2,61.448h25.749a3.756,3.756,0,0,1,3.681,3.822v2.871H86.514ZM78.589,78.884V75.4a3.781,3.781,0,0,1,3.787-3.734h41.371a3.758,3.758,0,0,1,3.787,3.734v3.487Z"
+                              transform="translate(-75.049 0)" />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+
+                    <div class="section-section_services-item-text">ПЕРЕТЯЖКА РУЧКИ КПП И РУЧНИКА</div>
+
+                    <a href="#" class="section-section_services-item-btn">ПОДРОБНЕЕ</a>
+                  </div>
+
+                  <div class="section-second_services-item">
+                    <div class="section-section_services-item-img">
+                      <div class="section-section_services-img--decor"></div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.302 82.877">
+                        <defs></defs>
+                        <g transform="translate(-51 0)">
+                          <g transform="translate(51)">
+                            <g class="a" transform="translate(-51)">
+                              <path class="c" d="M109.014,0H75.863L51,24.863V74.589a8.312,8.312,0,0,0,8.288,8.288h49.726a8.312,8.312,0,0,0,8.288-8.288V62.26l-8.288-7.454V31.552l8.288-7.2V8.288A8.312,8.312,0,0,0,109.014,0Z" />
+                              <path class="d" d="M 77.51988983154297 4 L 55 26.5198860168457 L 55 74.58908081054688 C 55 75.72521209716797 55.44851684570313 76.79943084716797 56.26293182373047 77.61384582519531 C 57.07734680175781 78.42825317382813 58.15154266357422 78.87677001953125 59.28767395019531 78.87677001953125 L 109.0137329101563 78.87677001953125 C 110.1498565673828 78.87677001953125 111.2240600585938 78.42825317382813 112.0384750366211 77.61384582519531 C 112.8528900146484 76.79943084716797 113.3014068603516 75.72521209716797 113.3014068603516 74.58908081054688 L 113.3014068603516 64.04229736328125 L 106.3387451171875 57.77962875366211 L 105.0137329101563 56.58781433105469 L 105.0137329101563 54.80565643310547 L 105.0137329101563 31.55157089233398 L 105.0137329101563 29.72821426391602 L 106.3900604248047 28.53224182128906 L 113.3014068603516 22.52657318115234 L 113.3014068603516 8.287673950195313 C 113.3014068603516 7.151557922363281 112.8528900146484 6.077339172363281 112.0384750366211 5.262924194335938 C 111.2240600585938 4.448516845703125 110.1498565673828 4 109.0137329101563 4 L 77.51988983154297 4 M 75.86302947998047 0 L 109.0137329101563 0 C 113.5719604492188 0 117.3014068603516 3.729454040527344 117.3014068603516 8.287673950195313 L 117.3014068603516 24.34992599487305 L 109.0137329101563 31.55157089233398 L 109.0137329101563 54.80565643310547 L 117.3014068603516 62.26012802124023 L 117.3014068603516 74.58908081054688 C 117.3014068603516 79.14731597900391 113.5719604492188 82.87677001953125 109.0137329101563 82.87677001953125 L 59.28767395019531 82.87677001953125 C 54.72944641113281 82.87677001953125 51 79.14731597900391 51 74.58908081054688 L 51 24.86302947998047 L 75.86302947998047 0 Z" />
+                            </g>
+                            <line class="b" x1="20" y2="20" transform="translate(12.889 10.952)" />
+                            <line class="b" x1="20" y2="20" transform="translate(12.889 20.952)" />
+                            <line class="b" x1="20" y2="20" transform="translate(12.889 40.952)" />
+                            <line class="b" x1="20" y2="20" transform="translate(12.889 30.952)" />
+                            <line class="b" x1="20" y2="20" transform="translate(12.889 50.952)" />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+
+                    <div class="section-section_services-item-text">АВТОМОБИЛЬНЫЕ КОВРИКИ</div>
+
+                    <a href="#" class="section-section_services-item-btn">ПОДРОБНЕЕ</a>
+                  </div>
+                </div>
+                
 
 
                 <article class="services-article">
@@ -411,6 +592,13 @@
                   <div><img src="assets/img/foto3.jpg" alt="foto"></div>
                   <div><img src="assets/img/foto4.jpg" alt="foto"></div>
                 </div>
+
+                <div class="section-third_gallery-mob">
+                  <a data-fancybox="gallery" href="assets/img/foto1.jpg"><img src="assets/img/foto1.jpg"></a>
+                  <a data-fancybox="gallery" href="assets/img/foto2.jpg"><img src="assets/img/foto2.jpg"></a>
+                  <a data-fancybox="gallery" href="assets/img/foto3.jpg"><img src="assets/img/foto3.jpg"></a>
+                  <a data-fancybox="gallery" href="assets/img/foto4.jpg"><img src="assets/img/foto4.jpg"></a>
+                </div>
               </div>
 
               <div class="section-arrow">
@@ -459,14 +647,14 @@
                   </div>
                   <p class="section-fourth_callback-text">Оставьте свои данные, и наш менеджер свяжется с вами в
                     максимально короткие сроки.</p>
-                  <form class="section-fourth_callback-form" action="#" method="post">
+                  <form id="form" class="section-fourth_callback-form" action="form.php" method="post">
                     <label>
                       <i class="fas fa-user"></i>
-                      <input type="text" placeholder="Ваше имя">
+                      <input type="text" placeholder="Ваше имя" name="name">
                     </label>
                     <label>
                       <i class="fas fa-phone"></i>
-                      <input type="text" placeholder="+380__-___-__-__">
+                      <input id="phone" type="text" placeholder="+380__-___-__-__" name="phone">
                     </label>
                     <button class="btn-submit" type="submit">ОТПРАВИТЬ</button>
                   </form>
@@ -498,6 +686,8 @@
                   </svg>
                 </div>
               </div>
+
+              
             </li>
             <li class="section-fifth l-section section">
               <div class="section-fifth_wrap">
@@ -509,23 +699,13 @@
                       <div class="section-fifth_contact-img">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.904 72.15">
                           <defs>
-                            <style>
-                              .a {
-                              fill: none;
-                              stroke: #00ffdc;
-                              stroke-width: 2px;
-                            }
-
-                            .b {
-                              fill: #00ffdc;
-                            }
-                          </style>
+                            <style>.a{fill:none;stroke:#00ffdc;stroke-width:2px;}.b{fill:#00ffdc;}</style>
                           </defs>
                           <g transform="translate(-988.5 -663.5)">
                             <path class="a" d="M33.711,72.053h.3a35.117,35.117,0,0,1-25.527-15.2,34.722,34.722,0,0,1,4.283-44.142,35.176,35.176,0,0,1,53.891,5.161,34.722,34.722,0,0,1-4.283,44.142A35.025,35.025,0,0,1,41.135,72.053h.452L37.649,75.99Z"
                               transform="translate(987 737.151) rotate(-90)" />
                             <path class="b" d="M21.57-11.043q-1.547,1.2-6.617,4.855l-.43.344a12,12,0,0,1-1.633,1.117,3.814,3.814,0,0,1-1.891.6,4.025,4.025,0,0,1-1.891-.559A17.092,17.092,0,0,1,7.477-5.8l-.43-.387Q1.848-9.969.43-11.043a.278.278,0,0,0-.279-.021.236.236,0,0,0-.15.236v8.766A1.989,1.989,0,0,0,.6-.6,1.989,1.989,0,0,0,2.063,0H19.938A1.989,1.989,0,0,0,21.4-.6,1.989,1.989,0,0,0,22-2.062v-8.766a.279.279,0,0,0-.15-.258A.212.212,0,0,0,21.57-11.043ZM11-5.5a2.743,2.743,0,0,1-1.375-.516,10.239,10.239,0,0,1-1.332-.945l-.43-.3Q2.578-11.129.688-12.59l-.3-.215A.979.979,0,0,1,0-13.621v-.816A1.989,1.989,0,0,1,.6-15.9a1.989,1.989,0,0,1,1.461-.6H19.938a1.989,1.989,0,0,1,1.461.6,1.989,1.989,0,0,1,.6,1.461v.816a.979.979,0,0,1-.387.816l-.215.172q-1.848,1.461-7.262,5.371l-.43.3a10.239,10.239,0,0,1-1.332.945A2.743,2.743,0,0,1,11-5.5Z"
-                              transform="translate(1015 707.5)" />
+                              transform="translate(1014 707.5)" />
                           </g>
                         </svg></div>
                       <div class="section-fifth_contact-text">г. Днепр<br> ул. Центральная 25 </div>
@@ -534,23 +714,13 @@
                       <div class="section-fifth_contact-img">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.904 72.15">
                           <defs>
-                            <style>
-                              .a {
-                              fill: none;
-                              stroke: #00ffdc;
-                              stroke-width: 2px;
-                            }
-
-                            .b {
-                              fill: #00ffdc;
-                            }
-                          </style>
+                            <style>.a{fill:none;stroke:#00ffdc;stroke-width:2px;}.b{fill:#00ffdc;}</style>
                           </defs>
                           <g transform="translate(-991.5 -512.5)">
                             <path class="a" d="M33.711,72.053h.3a35.117,35.117,0,0,1-25.527-15.2,34.722,34.722,0,0,1,4.283-44.142,35.176,35.176,0,0,1,53.891,5.161,34.722,34.722,0,0,1-4.283,44.142A35.025,35.025,0,0,1,41.135,72.053h.452L37.649,75.99Z"
                               transform="translate(990 586.151) rotate(-90)" />
                             <path class="b" d="M21.184-18.176a.815.815,0,0,1,.6.344,1.088,1.088,0,0,1,.215.645A19.61,19.61,0,0,1,19.293-7.133,20.033,20.033,0,0,1,12.117.043,19.61,19.61,0,0,1,2.063,2.75a1.088,1.088,0,0,1-.645-.215.815.815,0,0,1-.344-.6L.043-2.535a.97.97,0,0,1,.086-.687A.925.925,0,0,1,.645-3.7L5.457-5.758A1.091,1.091,0,0,1,6.1-5.822a.863.863,0,0,1,.559.365L8.766-2.879a15.1,15.1,0,0,0,4.49-3.137,15.786,15.786,0,0,0,3.115-4.469l-2.578-2.148a1.029,1.029,0,0,1-.344-.537,1.071,1.071,0,0,1,.043-.666l2.063-4.812a.948.948,0,0,1,.473-.473.97.97,0,0,1,.688-.086Z"
-                              transform="translate(1017.986 557.236)" />
+                              transform="translate(1015.986 557.236)" />
                           </g>
                         </svg></div>
                       <div class="section-fifth_contact-text">+38 066 123 45 67<br> +38 067 123 45 67</div>
@@ -559,23 +729,13 @@
                       <div class="section-fifth_contact-img">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.904 72.15">
                           <defs>
-                            <style>
-                              .a {
-                              fill: none;
-                              stroke: #00ffdc;
-                              stroke-width: 2px;
-                            }
-
-                            .b {
-                              fill: #00ffdc;
-                            }
-                          </style>
+                            <style>.a{fill:none;stroke:#00ffdc;stroke-width:2px;}.b{fill:#00ffdc;}</style>
                           </defs>
                           <g transform="translate(-967.5 -312.5)">
                             <path class="a" d="M33.711,72.053h.3a35.117,35.117,0,0,1-25.527-15.2,34.722,34.722,0,0,1,4.283-44.142,35.176,35.176,0,0,1,53.891,5.161,34.722,34.722,0,0,1-4.283,44.142A35.025,35.025,0,0,1,41.135,72.053h.452L37.649,75.99Z"
                               transform="translate(966 386.151) rotate(-90)" />
                             <path class="b" d="M0-14.18a1.334,1.334,0,0,1,.236-.773,1.461,1.461,0,0,1,.623-.516l6.016-2.406v16.5L.945,1.332A.654.654,0,0,1,.3,1.246.658.658,0,0,1,0,.688Zm8.25,12.8v-16.5l8.25,2.75v16.5ZM23.8-17.832a.654.654,0,0,1,.645.086.658.658,0,0,1,.3.559V-2.32a1.334,1.334,0,0,1-.236.773,1.461,1.461,0,0,1-.623.516L17.875,1.375v-16.5Z"
-                              transform="translate(993 356.88)" />
+                              transform="translate(991 356.88)" />
                           </g>
                         </svg></div>
                       <div class="section-fifth_contact-text">goren@mail.com</div>
@@ -611,6 +771,40 @@
           </ul>
         </div>
       </div>
+
+      <div class="form-helpcall">
+        <div class="form-helpcall_wrap">
+            <div class="close-btn  close-btn--form"></div>
+          <div class="form-helpcall_content">
+            <h5 class="form-helpcall_title">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</h5>
+            <form id="form-help" action="formHelp.php" method="post"> 
+              <label class="form-helpcall_label">
+                <i class="fas fa-user"></i>
+                <input name="name" type="text">
+              </label>
+              <label class="form-helpcall_label">
+                <i class="fas fa-phone"></i>
+                <input name="phone" type="text">
+              </label>
+              <label class="form-helpcall_label">
+                <i class="fas fa-envelope"></i>
+                <input name="email" type="text">
+              </label>
+              <label class="form-helpcall_label-textarea">
+                <i class="far fa-comment"></i>
+                <textarea name="textarea" id=""></textarea>
+              </label>
+              <button class="header-toggle header-toggle--form" type="submit">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-popup">
+          <div class="form-popup__wrapper">
+            <h5 class="form-popup__name"></h5><a class="close-popup-btn" href="#">Закрыть</a>
+          </div>
+        </div>
     </div>
   </div>
 
@@ -642,204 +836,204 @@
 
   <script src="assets/js/functions.js"></script>
 
+  <script src="assets/js/jquery.fancybox.min.js"></script>
+  
+
 
   <script type="text/javascript">
-
     // Определяем переменную map
     var map;
 
     // Функция initMap которая отрисует карту на странице
     function initMap() {
-      
 
-        // В переменной map создаем объект карты GoogleMaps и вешаем эту переменную на <div id="map"></div>
-        map = new google.maps.Map(document.getElementById('map'), {
-            // При создании объекта карты необходимо указать его свойства
-            // center - определяем точку на которой карта будет центрироваться
-            center: {lat: 48.466041, lng: 35.052158},
-            // zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
-            zoom: 16,
-            scrollwheel: false,
-            styles: [
-    {
-        "featureType": "all",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
+
+      // В переменной map создаем объект карты GoogleMaps и вешаем эту переменную на <div id="map"></div>
+      map = new google.maps.Map(document.getElementById('map'), {
+        // При создании объекта карты необходимо указать его свойства
+        // center - определяем точку на которой карта будет центрироваться
+        center: {
+          lat: 48.466041,
+          lng: 35.052158
+        },
+        // zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
+        zoom: 16,
+        scrollwheel: false,
+        styles: [{
+            "featureType": "all",
+            "elementType": "labels.text.fill",
+            "stylers": [{
                 "saturation": 36
-            },
-            {
+              },
+              {
                 "color": "#000000"
-            },
-            {
+              },
+              {
                 "lightness": 40
-            }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
+              }
+            ]
+          },
+          {
+            "featureType": "all",
+            "elementType": "labels.text.stroke",
+            "stylers": [{
                 "visibility": "on"
-            },
-            {
+              },
+              {
                 "color": "#000000"
-            },
-            {
+              },
+              {
                 "lightness": 16
-            }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
+              }
+            ]
+          },
+          {
+            "featureType": "all",
+            "elementType": "labels.icon",
+            "stylers": [{
+              "visibility": "off"
+            }]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry.fill",
+            "stylers": [{
                 "color": "#000000"
-            },
-            {
+              },
+              {
                 "lightness": 20
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
+              }
+            ]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry.stroke",
+            "stylers": [{
                 "color": "#000000"
-            },
-            {
+              },
+              {
                 "lightness": 17
-            },
-            {
+              },
+              {
                 "weight": 1.2
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "geometry",
-        "stylers": [
-            {
+              }
+            ]
+          },
+          {
+            "featureType": "landscape",
+            "elementType": "geometry",
+            "stylers": [{
                 "color": "#000000"
-            },
-            {
+              },
+              {
                 "lightness": 20
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry",
-        "stylers": [
-            {
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [{
                 "color": "#000000"
-            },
-            {
+              },
+              {
                 "lightness": 21
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry.fill",
+            "stylers": [{
                 "color": "#000000"
-            },
-            {
+              },
+              {
                 "lightness": 17
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry.stroke",
+            "stylers": [{
                 "color": "#000000"
-            },
-            {
+              },
+              {
                 "lightness": 29
-            },
-            {
+              },
+              {
                 "weight": 0.2
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "geometry",
-        "stylers": [
-            {
+              }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "geometry",
+            "stylers": [{
                 "color": "#000000"
-            },
-            {
+              },
+              {
                 "lightness": 18
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "elementType": "geometry",
-        "stylers": [
-            {
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "geometry",
+            "stylers": [{
                 "color": "#000000"
-            },
-            {
+              },
+              {
                 "lightness": 16
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "geometry",
-        "stylers": [
-            {
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "elementType": "geometry",
+            "stylers": [{
                 "color": "#000000"
-            },
-            {
+              },
+              {
                 "lightness": 19
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "geometry",
-        "stylers": [
-            {
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [{
                 "color": "#000000"
-            },
-            {
+              },
+              {
                 "lightness": 17
-            }
+              }
+            ]
+          }
         ]
-    }
-]
-        });
+      });
 
-        var image = 'assets/img/marker.png';
-            var marker = new google.maps.Marker({
-                    position: {lat: 48.466020, lng: 35.045270},
-                    map: map,
-                    icon: image
-                });
+      var image = 'assets/img/marker.png';
+      var marker = new google.maps.Marker({
+        position: {
+          lat: 48.466020,
+          lng: 35.045270
+        },
+        map: map,
+        icon: image
+      });
     }
-
-    
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG94N1bV6jGbbgTdW0jFgUDuajVBLt99k&callback=initMap"></script>
+  <script src="jquery.maskedinput.js"></script>
+  <script>
+    //Код jQuery, установливающий маску для ввода телефона элементу input
+    //1. После загрузки страницы,  когда все элементы будут доступны выполнить...
+    $(function () {
+      //2. Получить элемент, к которому необходимо добавить маску
+      $("#phone").mask("+38(099) 999-99-99");
+    });
+  </script>
 </body>
 
 </html>

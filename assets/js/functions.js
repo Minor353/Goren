@@ -282,7 +282,7 @@ $( document ).ready(function() {
 
 /***************************************************************************************/
 /***************************************************************************************/
-
+/**Переключение страниц по различным пунктам навигации**/
 const slideToggle = function() {
   const sideItems = document.querySelectorAll('.side-item');
   const headerItems = document.querySelectorAll('.header_nav-item');
@@ -338,8 +338,9 @@ const slideToggle = function() {
 slideToggle();
 
 /***************************************************************************************************/
+/**Открытие доп секций на странице Услуги **/
 
-const servicesPageOpen = function() {
+/*const servicesPageOpen = function() {
   const pageBtn = document.querySelectorAll('.section-second_services-item');
   const pageItem = document.querySelectorAll('.services-article');
   const closeBtn = document.querySelectorAll('.close-btn');
@@ -358,26 +359,166 @@ const servicesPageOpen = function() {
   }
 }
 
-servicesPageOpen();
+servicesPageOpen();*/
 
 /****************************************************************************************************/
 
+/**Обработка формы секции О нас*/
 
-const slideNavSlider = function () {
-  const btnPrev = document.querySelector('.section-third_gallery-nav .slick-prev');
-  const btnNext = document.querySelector('.section-third_gallery-nav .slick-next');
+$('#form').on('submit', submitForm);
 
-btnPrev.addEventListener('click', function(){
-  
-  
-});
-  
-  
+function submitForm(e) {
+    e.preventDefault();
+
+    var form = $(e.target),
+        data = form.serialize(),
+        url = form.attr('action');
+
+    var request = $.ajax({
+        type: 'POST',
+        url: url,
+        data: data
+    });
+
+    let formPopup = document.querySelector('.form-popup'),
+        formPopupName = document.querySelector('.form-popup__name');
+
+    request.done(function (msg) {
+        formPopup.classList.add('form-popup-active');
+        formPopupName.textContent = 'Сообщение отправлено';
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+        formPopup.classList.add('form-popup-active');
+        formPopupName.textContent = 'Произошла ошибка! Сообщение не отправлено.';
+    })
+};
+
+/****************************************************************************************************/
+
+/**Обработка формы Консультация*/
+
+$('#form-help').on('submit', submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+
+    var form = $(e.target),
+        data = form.serialize(),
+        url = form.attr('action');
+
+    var request = $.ajax({
+        type: 'POST',
+        url: url,
+        data: data
+    });
+
+    let formPopup = document.querySelector('.form-popup'),
+        formPopupName = document.querySelector('.form-popup__name');
+
+    request.done(function (msg) {
+        formPopup.classList.add('form-popup-active');
+        formPopupName.textContent = 'Сообщение отправлено';
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+        formPopup.classList.add('form-popup-active');
+        formPopupName.textContent = 'Произошла ошибка! Сообщение не отправлено.';
+    })
 };
 
 
-slideNavSlider();
+
+
+/*************************************************************************/
+/**Форма Получить консультацию*/
+
+const formHelperOpen = function () {
+  const formOpenBtn = document.querySelectorAll('.header-toggle');
+  const formHelp = document.querySelector('.form-helpcall');
+  const formCloseBtn = document.querySelector('.close-btn--form');
+
+  for(let i = 0; i < formOpenBtn.length; i++) {
+  formOpenBtn[i].addEventListener('click', function(){
+    formHelp.classList.remove('services-article--animate-close');
+    formHelp.classList.add('services-article--animate-open');
+  });
+  }
+  formCloseBtn.addEventListener('click', function(){
+    formHelp.classList.remove('services-article--animate-open');
+    formHelp.classList.add('services-article--animate-close');
+  });
+
+  formHelp.addEventListener('click', function(){
+    if(event.target == formHelp) {
+      formHelp.classList.remove('services-article--animate-open');
+      formHelp.classList.add('services-article--animate-close');
+    }
+  })
+};
+
+
+formHelperOpen();
 
 
 
+const closeFormPopup = function () {
+  let formPopup = document.querySelector('.form-popup');
+  let closeBtn = document.querySelector('.close-popup-btn');
+  const formHelp = document.querySelector('.form-helpcall');
 
+  closeBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      formPopup.classList.remove('form-popup-active');
+      formHelp.classList.remove('services-article--animate-open');
+      formHelp.classList.add('services-article--animate-close');
+      $("form")[0].reset();
+  })
+};
+closeFormPopup();
+
+
+/****************Адаптивное меню***********************/
+
+const mobileMenuOpen = function(){
+  const burgerBtn = document.querySelector('.burger-mobile');
+  const mobileNav = document.querySelector('.header_nav');
+  const mobileNavItem = document.querySelectorAll('.header_nav-item');
+  const mobileNavDecor = document.querySelector('.header_nav--decor');
+
+  burgerBtn.addEventListener('click', function(){
+    mobileNav.classList.toggle('header_nav--active');
+    mobileNavDecor.classList.toggle('header_nav--decor-active');
+    for(let i = 0; i < mobileNavItem.length; i++){
+      mobileNavItem[i].classList.toggle('nav-animate');
+    }
+  })
+}
+
+mobileMenuOpen();
+
+
+
+/***************Табы на услугах*************************/
+
+const tabToogle = function(){
+  console.log('work');
+  
+  const tabsBtns = document.querySelectorAll('.section-second_services-btn');
+  const tabsPage = document.querySelectorAll('.section-second_services-item-wrap');
+
+  for(let i = 0; i < tabsBtns.length; i++) {
+    tabsBtns[i].addEventListener('click', function(){
+      for(let i = 0; i < tabsBtns.length; i++) {
+        tabsBtns[i].classList.remove('section-second_services-btn--active');
+        tabsPage[i].classList.remove('section-second_services-item-wrap--active');
+      }
+      tabsBtns[i].classList.add('section-second_services-btn--active');
+        tabsPage[i].classList.add('section-second_services-item-wrap--active');
+    })
+  }
+}
+
+
+tabToogle();
